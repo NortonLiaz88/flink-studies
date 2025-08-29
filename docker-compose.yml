@@ -58,6 +58,19 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
 
+  kafdrop:
+    image: obsidiandynamics/kafdrop
+    restart: "no"
+    ports:
+      - "9000:9000"
+    networks: # <-- Ajuste 1: Conectado na mesma rede do Kafka
+      - flink-study-ntw
+    environment:
+      # Ajuste 2: Apontando para o endereço INTERNO do Kafka
+      KAFKA_BROKERCONNECT: "kafka:9092" 
+    depends_on:
+      - kafka
+
 networks:
   flink-study-ntw:
     driver: bridge

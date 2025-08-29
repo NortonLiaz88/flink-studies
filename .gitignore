@@ -9,3 +9,4 @@ wheels/
 # Virtual environments
 .venv
 flink_connectors/
+.env

@@ -8,7 +8,7 @@ from kafka import KafkaProducer
 # Substitua pela sua chave da API da Alpha Vantage
 ALPHA_VANTAGE_API_KEY = os.environ.get('ALPHA_VANTAGE_API_KEY', 'KEY')
 KAFKA_TOPIC = 'alpha_vantage_json'
-KAFKA_BROKER = 'localhost:9092'
+KAFKA_BROKER = 'localhost:9094'
 SYMBOL = 'IBM' # Exemplo: Ações da IBM
 INTERVAL = '5min' # Frequência dos dados
 

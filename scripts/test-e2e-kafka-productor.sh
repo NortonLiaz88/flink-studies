@@ -1,0 +1,1 @@
+docker compose exec kafka kafka-console-producer --topic alpha_vantage_json --broker-list kafka:9092
